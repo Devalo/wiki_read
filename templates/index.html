@@ -17,7 +17,7 @@
                         <h6 class="card-subtitle mb-2 text-muted"><br></h6>
                         <p class="card-text">{{ articles[article][1]|truncate(355, False) }}</p>
                         <div class="col">
-                            <img src="{{articles[article][2]}}">
+                            <img src="{{articles[article][2]}}" onerror="this.style.display='none'">
                         </div>
                         <div class="col"><br>
                             <a href="https://en.wikipedia.org/?curid={{article}}"  target="_blank" class="card-link">Read article</a>
