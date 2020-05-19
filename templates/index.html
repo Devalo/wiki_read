@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <h2>Find a Wikipedia article to read</h2>
+
+    <div class="container ">
+        {% for article in articles:%}
+
+            <div class="row">
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <h5> {{articles[article][0]}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><br></h6>
+                        <p class="card-text">{{ articles[article][1]|truncate(355, False) }}</p>
+                        <a href="https://en.wikipedia.org/?curid={{article}}"  target="_blank" class="card-link">Read article</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor%}
+
+    </div>
+
+
+{% endblock %}
