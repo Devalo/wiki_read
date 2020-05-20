@@ -5,11 +5,23 @@
 {% endblock %}
 
 {% block main %}
-    <h2>Find a Wikipedia article to read</h2>
 
-    <div class="container ">
+    <h2>Teach yourself something new!</h2>
+    <h4>Find an article from Wikipedia to read.</h4>
+
+    <div class="container">
+        <div>
+            <form action="/" method="post">
+                <div class="form-group">
+                    <input type="text" name="amount" placeholder="Number of articles">
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="submit" class="btn btn-primary">Reload</button>
+                </div>
+            </form>
+        </div>
+
         {% for article in articles:%}
-
             <div class="row">
                 <div class="card mx-auto">
                     <div class="card-body">
@@ -27,7 +39,16 @@
             </div>
         {% endfor%}
 
+        <div>
+            <form action="/" method="post">
+                <div class="form-group">
+                    <input type="text" name="amount" placeholder="Enter number of articles">
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="submit" class="btn btn-primary">Reload</button>
+                </div>
+            </form>
+        </div>
     </div>
-
 
 {% endblock %}
